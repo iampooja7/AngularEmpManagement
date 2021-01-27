@@ -1,0 +1,11 @@
+main {
+    padding-top: 90px;
+    background-image: url("/assets/img4.jpg");
+    background-size: cover;
+  }
+  #myForm {
+   
+    border: 3px solid black;
+   
+    background-color:white;
+  }

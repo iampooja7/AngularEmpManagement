@@ -1,0 +1,136 @@
+<app-admin-dashboard></app-admin-dashboard>
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div style="text-align: center;">
+    <h1>Welcome Admin</h1>
+    <br>
+    <div class="form-popup col-md-8 mx-auto" id="myForm" style="text-align: left;">
+        <br>
+        <h4 style="text-align: center; color: wheat; background-color: black; padding: 4px;">Update Admin</h4><br>
+      <div class="col-md-8 mx-auto"  >
+      <div class="submit-form">
+        <div *ngIf="!submitted">
+        <form ngNativeValidate  (ngSubmit)="createAndUpdate(es.currentEmployee)">
+         <div class="row">
+           <div class="form-group col-md-6">
+            <label for="name"> Name :</label>
+           <input type="text" class="form-control" 
+              name="name" id="name"  [(ngModel)]="es.currentEmployee.name" required />
+             
+          </div>
+          <div class="form-group col-md-6">
+            <label for="email">Email :</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="username"
+              disabled
+              required
+              [(ngModel)]="es.currentEmployee.username"
+              disabled
+            />
+          </div>
+        </div>
+        <div class="row">
+              <div class="form-group col-md-6">
+               <label for="salary"> Salary :</label>
+              <input type="text" class="form-control"
+              name="salary" 
+              [(ngModel)]="es.currentEmployee.salary"
+                required />
+            
+          </div> 
+          <div class="form-group col-md-6">
+            <label for="designation">Designation :</label>
+            <select 
+            name="designation"
+            id="designation" 
+            class="form-control" 
+           
+            required
+            
+            [(ngModel)]="es.currentEmployee.designation">
+      
+                  <option  selected>--Select Designation--</option>
+                  <option value="Associate Software Engineer" >Associate Software Engineer</option>
+                  <option value="Software Engineer">Software Engineer</option>
+                  <option value="Trainer">Trainer</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6" >
+              <label for="doj"> Date of Joining :</label>
+             <input type="date" class="form-control" 
+             name="doj"
+             disabled
+             [(ngModel)]="es.currentEmployee.doj"
+             required />
+            </div>
+            
+             
+             <div class="form-group col-md-6">
+              <label for="acctype">Account type :</label>
+              <select 
+              
+              id="acctype" 
+              class="form-control" 
+              name="acctype"
+              [(ngModel)]="es.currentEmployee.acctype"
+              disabled
+              required
+              
+              >
+              <option value="0" selected>--Select Acc. Type--</option>
+              <option value="Admin">Admin</option>
+              <option value="Employee">Employee</option>
+             
+        </select>
+            </div>
+        </div>
+              <div class="form-group">
+                <label for="skills"> Skill :</label>
+               <input type="text" class="form-control" 
+               name="skills"
+               [(ngModel)]="es.currentEmployee.skills"
+                    required />
+              
+             </div>
+                   
+         
+            <div class="form-group">
+              <label for="password"> Password :</label>
+             <input type="text" class="form-control" 
+             name="password"
+             [(ngModel)]="es.currentEmployee.password"
+                required />
+            </div><br>
+            <div class="col-md-3 mx-auto">
+          <input type="submit" class="btn btn-success" value="Submit" />
+        </div>
+            <br>
+      
+          </form>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="card-container mx-auto" >
+        <span class="pro">PRO</span>
+        <img src=".\assets\avtar.jpg" alt="user"/>
+        <h3>{{list.name}}</h3>
+        <h6>Maharashtra, India</h6>
+        <p>{{list.designation}}</p>
+       <p>DOJ: {{list.doj}}</p>
+       <p>Skills: {{list.skills}}</p>
+        <div class="buttons">
+            <button class="primary" (click)="editProfile()">
+                Edit
+            </button>
+           
+        </div>
+        <br>
+    </div>
+</div>
+</main>

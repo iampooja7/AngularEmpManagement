@@ -1,0 +1,111 @@
+<app-employee-dashboard></app-employee-dashboard>
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <h3>Employees</h3>
+    
+    <hr>
+    <br><br>
+    <div class="col-md-4">
+      <input type="text" class="form-control"  [(ngModel)]="namesearch" (input)="searchName()"
+            name="namesearch" id="searchname" placeholder="Enter name" required />
+           
+    </div>
+    <div class="col-md-4">
+      <input type="text" class="form-control"  [(ngModel)]="searchsalary" (input)="searchSalary()"
+            name="searchsalary" id="searchsalary" placeholder="Enter salary" required />
+           
+    </div>
+    <div class="col-md-4">
+      <input type="date" class="form-control"  [(ngModel)]="searchdate" (input)="searchDate()"
+            name="datesearch" id="searchdate" placeholder="Enter Date" required />
+           
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <input type="date" class="form-control"  [(ngModel)]="startdate" 
+              name="startdate" id="startdate" placeholder="Enter Date" required />
+             
+      </div>
+      <div class="col-md-2">
+        <input type="date" class="form-control"  [(ngModel)]="enddate" (input)="searchDateRange()"
+              name="endsearch" id="enddate" placeholder="Enter Date" required />
+             
+      </div>
+      </div>
+    <div class="col-md-4">
+     
+      <select 
+      id="searchdesig" 
+      class="form-control" 
+      name="searchdesig"
+      [(ngModel)]="searchdesig" (change)="searchDesig($event)"
+      required
+      
+      >
+    
+            <option value="No data" selected>--All Data--</option>
+            <option value="Associate Software Engineer">Associate Software Engineer</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Trainer">Trainer</option>
+      </select>
+    
+    </div>
+    <div class="col-md-4">
+      <input type="text" class="form-control"  [(ngModel)]="searchskill" (input)="searchSkill()"
+            name="skillsearch" id="searchskill" placeholder="Enter Skill" required />
+           
+    </div>
+    <div class="row">
+    <div class="col-md-4">
+     
+      <select 
+      
+      id="searchbox" 
+      class="form-control" 
+      name="name"
+      (change)="searchEvent($event)"
+      required
+      
+      >
+    
+            <option value="0" selected>--Select Search Type--</option>
+            <option value="name">Name</option>
+            <option value="DOJ">DOJ</option>
+            <option value="range">DOJ (range)</option>
+            <option value="Designation">Position</option>
+            <option value="skill">Skill</option>
+      </select>
+    
+    </div>
+    </div>
+    
+    
+    
+    <br>
+    <div class="table-responsive">
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+             
+              <th scope="col">Position</th>
+              <th scope="col">DOJ</th>
+              <th scope="col">Skills</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let Employees of list">
+             
+              <td>{{Employees.id}}</td>
+              <td>{{Employees.name}}</td>
+              
+              <td>{{Employees.designation}}</td>
+              <td>{{Employees.doj}}</td>
+              <td>{{Employees.skills}}</td>
+              
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+</main>

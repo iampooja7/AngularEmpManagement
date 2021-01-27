@@ -1,0 +1,95 @@
+<app-admin-dashboard></app-admin-dashboard>
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <div class="col-md-8 mx-auto" id="myForm" style="text-align: left;">
+    <br>
+<h3 style="text-align: center; color: wheat; background-color: black; padding: 4px;">Add Employee</h3><br>
+<div class=" col-md-12 "  >
+<div class="submit-form">
+  <div *ngIf="!submitted">
+  <form [formGroup]="employeeForm" ngNativeValidate  (ngSubmit)="addEmployee()">
+   <div class="row">
+     <div class=" form-group col-md-6" >
+      <label for="name"> Name :</label>
+     <input type="text" class="form-control" 
+         formControlName="name" required />
+    </div>
+    <div class="form-group  col-md-6">
+      <label for="email">Email :</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        required
+       
+        formControlName="email"
+      />
+    </div>
+  </div>
+  <div class="row">
+        <div class=" form-group  col-md-6" >
+         <label for="salary"> Salary :</label>
+        <input type="text" class="form-control" 
+          formControlName="salary" required />
+      
+    </div> 
+    <div class="form-group  col-md-6">
+        <label for="designation">Designation :</label>
+        <select 
+        formControlName="designation"
+        id="designation" 
+        class="form-control" 
+        required
+        
+        >
+  
+              <option value="0" selected>--Select Designation--</option>
+              <option value="Associate software engineer">Associate software engineer</option>
+              <option value="Trainer">Trainer</option>
+              <option value="Software engineer">Software engineer</option>
+        </select>
+      </div>
+  </div>
+  <div class="row">
+      <div class=" form-group col-md-6" >
+        <label for="doj"> Date of Joining :</label>
+       <input type="date" class="form-control" 
+       formControlName="doj" required />
+      </div>
+      <div class="form-group col-md-6">
+        <label for="acctype">Account type :</label>
+        <select 
+        formControlName="acctype"
+        id="acctype" 
+        class="form-control" 
+        required
+        
+        >
+  
+              <option value="0" selected>--Select Acc. Type--</option>
+              <option value="Associate software engineer">Admin</option>
+              <option value="Trainer">Employee</option>
+             
+        </select>
+      </div>
+    </div>
+        <div class=" form-group" >
+         <label for="skill"> Skill :</label>
+        <input type="text" class="form-control" 
+            formControlName="skill" required />
+       
+      </div>
+      
+     
+      <div class="col-md-3 mx-auto">
+    <input type="submit" class="btn btn-success" value="Submit" />
+  </div>
+ <br>
+ <br>
+</form>
+  </div>
+  </div>
+
+  </div>
+</div>
+</main>
+ 

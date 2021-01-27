@@ -1,0 +1,59 @@
+{
+  "login": [
+    {
+      "id": 1,
+      "name": "Pooja Vaidya",
+      "username": "pooja@gmail.com",
+      "password": "pooja@123",
+      "acctype": "Admin",
+      "designation": "Software Engineer",
+      "salary": 23000,
+      "doj": "2020-09-16",
+      "skills": "Angular,python"
+    },
+    {
+      "id": 2,
+      "name": "Prasad Vaidya",
+      "username": "prasad@gmail.com",
+      "password": "prasad@123",
+      "acctype": "Employee",
+      "designation": "Software Engineer",
+      "salary": 33000,
+      "doj": "2020-10-18",
+      "skills": "C++,java,angular"
+    },
+    {
+      "name": "Huma Khan",
+      "username": "huma@gmail.com",
+      "acctype": "Admin",
+      "designation": "Associate Software Engineer",
+      "salary": "43000",
+      "doj": "2020-10-16",
+      "skills": "Angular",
+      "password": "huma@123",
+      "id": 3
+    },
+    {
+      "name": "Aishwarya Gotmare",
+      "username": "aish@gmail.com",
+      "acctype": "Admin",
+      "designation": "Software Engineer",
+      "salary": "22000",
+      "doj": "2020-09-18",
+      "skills": "Angular",
+      "password": "aish@123",
+      "id": 4
+    },
+    {
+      "name": "John Doe",
+      "username": "john@gmail.com",
+      "acctype": "Employee",
+      "designation": "Associate Software Engineer",
+      "salary": "45000",
+      "doj": "2020-07-18",
+      "skills": "Java,Angular",
+      "password": "john@123",
+      "id": 5
+    }
+  ]
+}

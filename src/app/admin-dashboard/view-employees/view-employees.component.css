@@ -1,0 +1,55 @@
+main {
+    padding-top: 90px;
+    background-image: url("/assets/img4.jpg");
+    background-size: cover;
+  }
+  .form-popup {
+    display: none;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  #searchbox{
+    margin-top: -38px;
+  }
+  #searchname{
+    display: none;
+    z-index: 9;
+   margin-top: -3px;
+   margin-left: 410px;
+  }
+  #searchsalary{
+    display: none;
+    z-index: 9;
+    margin-top: -3px;
+   margin-left: 410px;
+  }
+  #searchdate{
+    display: none;
+    z-index: 9;
+    margin-top: -3px;
+    margin-left: 410px;
+  }
+  #searchdesig{
+    display: none;
+    z-index: 9;
+    margin-top: -3px;
+   margin-left: 410px;
+  }
+  #searchskill{
+    display: none;
+    z-index: 9;
+    margin-top: -3px;
+   margin-left: 410px;
+  }
+  #startdate{
+    display: none;
+    z-index: 9;
+    margin-top: -3px;
+   margin-left: 380px;
+  }
+  #enddate{
+    display: none;
+    z-index: 9;
+    margin-top: -3px;
+   margin-left: 380px;
+  }
